@@ -2,10 +2,10 @@
 
  ### Task Description
 
-♦ Pull the Docker container image of CentOS image from DockerHub
-♦ create a new container
-♦ Install the Python software on the top of docker container
-♦ In Container you need to copy/create machine learning model which you  have created in jupyter notebook
+♦ Pull the Docker container image of CentOS image from DockerHub <\br>
+♦ create a new container <\br>
+♦ Install the Python software on the top of docker container <\br>
+♦ In Container you need to copy/create machine learning model which you  have created in jupyter notebook <\br>
 
 
 > Step 1:
@@ -57,9 +57,9 @@ Installation of docker image:
 
 Installing Necessary software like python and libraries in the Container
 
-`yum install python3`
-`pip3 install joblib`
-`pip3 install sklearn` //this will also install other dependent libraries
+`yum install python3` <\br>
+`pip3 install joblib` <\br>
+`pip3 install sklearn` //this will also install other dependent libraries <\br>
 
 ![docker-sw](ScreenShots/docker-sw.jpg)
 
