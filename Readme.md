@@ -1,5 +1,7 @@
 # *Creating and Deploying Machine Learning Model in Docker Container*
 
+![model-training](ScreenShots/1.jpg)
+
  ### Task Description
 
 ♦ Pull the Docker container image of CentOS image from DockerHub </br>
@@ -57,6 +59,7 @@ Installation of docker image:
 
 Installing Necessary software like python and libraries in the Container
 
+`yum install ncurses-6.1-7.20180224.el8.x86_64` //this will provide the clear Command</br> 
 `yum install python3` </br>
 `pip3 install joblib` </br>
 `pip3 install sklearn` //this will also install other dependent libraries </br>
@@ -77,10 +80,14 @@ Note: We can also get the terminal of the container via `docker attach <containe
 
 Python Program (salary.py) in the container to run the model
 ```
+import os
 import joblib
 mind=joblib.load('salary.pk1')
+os.system("clear")
+print("Welcome")
+mind=joblib.load('salary.pk1')
 i=float(input("Enter Years of Experience: "))
-print(mind.predict([[i]]))
+print("Predicted salary of the employee is ",mind.predict([[i]]))
 ```
 Execution:
 `python3 salary.py`
