@@ -2,10 +2,10 @@
 
  ### Task Description
 
-♦ Pull the Docker container image of CentOS image from DockerHub <\br>
-♦ create a new container <\br>
-♦ Install the Python software on the top of docker container <\br>
-♦ In Container you need to copy/create machine learning model which you  have created in jupyter notebook <\br>
+♦ Pull the Docker container image of CentOS image from DockerHub </br>
+♦ Create a new container </br>
+♦ Install the Python software on the top of docker container </br>
+♦ In Container you need to copy/create machine learning model which you  have created in jupyter notebook </br>
 
 
 > Step 1:
@@ -20,17 +20,17 @@
 Docker Installation
 * Here we are doing the installation of the docker on top of rhel-8 so we first need to configure the yum repo from /etc/yum.repos.d/<repo_name>.repo
 
-content of repo:
+Content of Repo:
 ```
 [docker]
 baseurl = https://download.docker.com/linux/centos/7/x86_64/stable/
 gpgcheck = 0
 ```
 
-* once the repo is configured we need to install the docker using command
+* Once the repo is configured we need to install the docker using command
 `yum install docker-ce`
 
-* for checking wheather Docker is install successfully or not we can use `docker info` command
+* For checking wheather Docker is install successfully or not we can use `docker info` command
 
 ![docker-info](ScreenShots/docker-info.jpg)
 
@@ -45,7 +45,7 @@ Installation of docker image:
  > Step 4
 
  Launching a centos container using the Docker
- command:
+ Command:
  `docker run -it --name salary-cont1 centos:latest`
 * Here with the help of run command we can launch the container
 * We want an interactive terminal so we used -it option
@@ -57,16 +57,16 @@ Installation of docker image:
 
 Installing Necessary software like python and libraries in the Container
 
-`yum install python3` <\br>
-`pip3 install joblib` <\br>
-`pip3 install sklearn` //this will also install other dependent libraries <\br>
+`yum install python3` </br>
+`pip3 install joblib` </br>
+`pip3 install sklearn` //this will also install other dependent libraries </br>
 
 ![docker-sw](ScreenShots/docker-sw.jpg)
 
 > Step 6
 
 Copy the created model from localhost into the Container
-command : `docker cp salary.pk1 salary-cont1:/root/.`
+Command : `docker cp salary.pk1 salary-cont1:/root/.`
 
 
 ![docker-cp](ScreenShots/docker-cp.jpg)
